@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  pages:
+    image: pages
+    restart: unless-stopped
+    container_name: "pages"
+    ports:
+        - "22555:22555"
+    hostname: "pages"
+    volumes:
+        - ./host-keys:/host-keys/
+        - ./www:/www/
