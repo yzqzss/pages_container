@@ -76,7 +76,7 @@ CMD set -eux; \
         chown $line:pages /www/$line; \
         chmod 705 /www/$line; \
         # link /www/{user} to /home/{user}/www
-        ln -s /www/$line /home/$line/www; \
+        ln -s -f /www/$line /home/$line/www; \
     done < /users.list; \
     # start sshd
     exec /usr/sbin/sshd -D -e

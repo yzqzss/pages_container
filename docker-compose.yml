@@ -8,11 +8,8 @@ services:
     ports:
         - "22555:22555"
     hostname: "pages"
-    deploy:
-      resources:
-        limits:
-          cpus: '0.10'
-          memory: 256M
+    cpus: 0.1
+    mem_limit: 128m
     volumes:
         - ./host-keys:/host-keys/
         - ./www:/www/
