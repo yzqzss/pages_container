@@ -12,7 +12,7 @@ services:
       resources:
         limits:
           cpus: '0.10'
-          memory: 128M
+          memory: 256M
     volumes:
         - ./host-keys:/host-keys/
         - ./www:/www/
